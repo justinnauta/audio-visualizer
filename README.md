@@ -1,5 +1,5 @@
 # Audio Visualizer
-This application is a customizable audio visualizer themed around the ocean. Users can select from three different songs and change some visualization parameters to experience audio visually.
+This application is a customizable audio visualizer themed around the ocean. Users can select from three different songs and change some visualization parameters to experience audio visually. You can view a live version [here.](https://people.rit.edu/jrn2778/330/project2/)
 
 ### Note
 This application was previously made as an academic project. I moved the code to this new repository for posterity and reference purposes. Find more of my projects at [justinnauta.com](https://justinnauta.com)
