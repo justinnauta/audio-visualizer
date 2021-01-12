@@ -1,0 +1,248 @@
+/* Audio Player */
+#audioPlayer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(9, 0, 51);
+    color: white;
+    border-radius: 10px;
+    width: 28em;
+}
+
+#audioPlayer section {
+    padding: 0.5em 0 0.5em 1em;
+}
+
+#playButton {
+    border: none;
+    border-top-left-radius: 10px;
+    background-color: rgb(182, 173, 212);
+    color: white;
+}
+
+#playButton:hover {
+    background-color: rgb(133, 125, 158);
+    cursor: pointer;
+}
+
+#trackSection {
+    width: 100%;
+    border-top: 1px solid rgb(182, 173, 212);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#trackSelect {
+    width: 85%;
+    background-color: rgb(182, 173, 212);
+}
+
+/* Slider from https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+#audioPlayer input[type=range] {
+    -webkit-appearance: none;
+    height: 10px;
+    border-radius: 5px;  
+    background: rgb(182, 173, 212);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+#audioPlayer input[type=range]:hover {
+    opacity: 1;
+}
+
+#audioPlayer input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; 
+    background: rgb(227, 219, 250);
+    cursor: pointer;
+}
+
+#audioPlayer input[type=range]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(38, 0, 173);
+    cursor: pointer;
+}
+
+/* Sliders */
+/* Slider from https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+#sliders input[type=range] {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 50%;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+#sliders input[type=range]:hover {
+    opacity: 1;
+}
+
+#sliders input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: rgb(20, 0, 90);
+    cursor: pointer;
+}
+
+#sliders input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: rgb(20, 0, 90);
+    cursor: pointer;
+}
+
+/* Checkboxes */
+/* Checkbox from https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+.checkbox-label {
+  display: block;
+  position: relative;
+  padding: 4px 30px 20px 35px;
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2px solid rgb(20, 0, 90);
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.checkbox-label:hover input ~ .checkbox-custom {
+  background-color: rgb(182, 173, 212);
+}
+
+.checkbox-label input:checked ~ .checkbox-custom {
+  background-color: rgb(20, 0, 90);
+  transition: all 0.3s;
+}
+
+.checkbox-custom:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom:after {
+  display: block;
+}
+
+.checkbox-label .checkbox-custom:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox-label:hover .checkbox-custom:after {
+   border: solid rgb(182, 173, 212);
+   border-width: 0 3px 3px 0;
+   -webkit-transform: rotate(45deg);
+   -ms-transform: rotate(45deg);
+   transform: rotate(45deg);
+}
+
+/* Radio Buttons */
+/* Radio button from https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+.rb-label {
+  position: relative;
+  padding-left: 1.3em;
+  padding-right: 0.8em;
+  cursor: pointer;
+}
+
+.rb-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.rb-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2px solid rgb(20, 0, 90);
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+
+.rb-label:hover input ~ .rb-custom {
+  background-color: rgb(182, 173, 212);
+}
+
+.rb-label input:checked ~ .rb-custom {
+  background-color: rgb(20, 0, 90);
+  transition: all 0.3s;
+}
+
+.rb-custom:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.rb-label input:checked ~ .rb-custom:after {
+  display: block;
+}
+
+.rb-label .rb-custom:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: white;
+}
+
+/* Buttons */
+#fsButton {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(182, 173, 212);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+#fsButton:hover {
+    background-color: rgb(133, 125, 158);
+    cursor: pointer;
+}
